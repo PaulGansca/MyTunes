@@ -72,6 +72,7 @@ header {
     width: 2em;
     border-radius: 2px;
     position: relative;
+    transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.5s;
   }
   
   .nav-toggle-label span::before,
@@ -87,6 +88,22 @@ header {
   .nav-toggle-label span::after {
     top: 7px;
   }
+
+  .nav-toggle:checked ~ .nav-toggle-label span {
+    transform: rotate(-45deg);
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span::before {
+    top: 1px;
+    transform: translateY(-1px) rotate(90deg);
+    background-color: #eee;
+  }
+
+  .nav-toggle:checked ~ .nav-toggle-label span::after {
+    opacity: 0;
+  }
+
+  
   
   nav {
     position: absolute;

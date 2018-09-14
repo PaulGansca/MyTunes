@@ -1,11 +1,9 @@
-let navBar = document.querySelector(".dark-nav");
+let hamburger = document.querySelector(".nav-toggle-label");
+
+console.log(hamburger)
 
 function handleNav() {
-    if (navBar.className === "dark-nav") {
-        navBar.className += " responsive";
-    } else {
-        navBar.className = "dark-nav";
-    }
+    hamburger.classList.toggle('close');
 }
 
-navBar.addEventListener('click', handleNav);
+hamburger.addEventListener('click', handleNav);
